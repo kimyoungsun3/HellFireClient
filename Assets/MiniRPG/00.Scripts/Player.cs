@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
     }
     public void SendMsg(string msg)
     {
+		//Debug.Log(msg);
         TalkObj.SetActive(true);
         msgTextWindow.text = msg;
         CancelInvoke("DisableTalk");
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour {
     UnityEngine.AI.NavMeshAgent nav;
     public void TargetMove(Vector3 pos)
     {
+		Debug.Log(enabled);
          nav.SetDestination(pos);
     }
     void DisableTalk()
